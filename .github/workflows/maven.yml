@@ -21,4 +21,8 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn clean test site
+      run: mvn clean test
+     - name: curl
+      uses: wei/curl@v1
+      with:
+        args: -X POST -F file=@@target/surefire-reports/TEST-com.activeai.cucu_mvn.TestRunner.xml https://studio.cucumber.io/import_test_reports/21393011997680689515649256473428367644489147497337436841/527964/junit
