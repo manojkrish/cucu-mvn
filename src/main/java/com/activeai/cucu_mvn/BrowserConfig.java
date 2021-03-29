@@ -26,7 +26,17 @@ public class BrowserConfig {
 		driverPath = getPath(osName);
 		System.out.println(driverPath);
 		System.out.println("in before test");
+		if (!osName.toLowerCase().trim().contains("windows")) {
+			Process p;
+			try {
+				p = Runtime.getRuntime().exec("chmod 777 -R " + driverPath);
 
+				p.waitFor();
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
 		if (browser.equalsIgnoreCase("firefox")) 
 		{
 			System.setProperty("webdriver.gecko.driver", driverPath + "geckodriver.exe");
