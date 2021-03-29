@@ -25,4 +25,4 @@ jobs:
     - name: curl
       uses: wei/curl@v1
       with:
-        args: -X POST -F file=@target/surefire-reports/TEST-com.activeai.cucu_mvn.TestRunner.xml https://studio.cucumber.io/import_test_reports/21393011997680689515649256473428367644489147497337436841/527964/junit
+        args: -X POST -F file=@target/surefire-reports/TEST-com.activeai.cucu_mvn.TestRunner.xml https://studio.cucumber.io/import_test_reports/15969108720368970844898563614448817912465383730968495780/528017/junit
