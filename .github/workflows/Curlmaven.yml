@@ -23,6 +23,12 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
       
-      - name: Github Action for curl
-  uses: wei/curl@v1.1.1
-
+   on: push
+jobs:
+  curl:
+    runs-on: ubuntu-latest
+    steps:
+    - name: curl
+      uses: wei/curl@v1
+      with:
+        args: -X POST -F file=@@target/surefire-reports/TEST-com.activeai.cucu_mvn.TestRunner.xml https://studio.cucumber.io/import_test_reports/21393011997680689515649256473428367644489147497337436841/527964/junit
