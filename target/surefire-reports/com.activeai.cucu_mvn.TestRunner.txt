@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.activeai.cucu_mvn.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.443 sec
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.755 s - in com.activeai.cucu_mvn.TestRunner

@@ -47,7 +47,7 @@ public class BrowserConfig {
 		else if (browser.equalsIgnoreCase("chrome")) 
 		{
 			ChromeOptions chrmOp = new ChromeOptions();
-			chrmOp.addArguments("--headless");
+			//chrmOp.addArguments("--headless");
 			chrmOp.addArguments("--disable-gpu");
 			chrmOp.addArguments("--window-size=1920x1080");
 			chrmOp.addArguments("--no-sandbox");
